@@ -1,1 +1,1 @@
-pandoc 5.md -f markdown-auto_identifiers -t latex -o 5.tex --top-level-division=chapter
+for %%i in (*.md) do pandoc %%~ni.md -f markdown-auto_identifiers -t latex -o %%~ni.tex --top-level-division=chapter
