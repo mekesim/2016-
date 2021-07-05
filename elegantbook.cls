@@ -130,10 +130,10 @@
   \definecolor{third}{RGB}{0,160,152}%
 }{\relax}
 \ifdefstring{\ELEGANT@color}{cyan}{
-  \definecolor{structurecolor}{RGB}{249, 168, 37}%
-  \definecolor{main}{RGB}{193, 121, 0}%193, 121, 0
-  \definecolor{second}{RGB}{249, 168, 37}%
-  \definecolor{third}{RGB}{249, 168, 37}%
+  \definecolor{structurecolor}{HTML}{bf360c}%
+  \definecolor{main}{HTML}{bf360c}%193, 121, 0 #bf360c
+  \definecolor{second}{HTML}{bf360c}%
+  \definecolor{third}{HTML}{bf360c}%
 }{\relax}
 \ifdefstring{\ELEGANT@color}{blue}{
   \definecolor{structurecolor}{RGB}{60,113,183}
