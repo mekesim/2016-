@@ -1,0 +1,89 @@
+\documentclass[cn,12pt,twoside]{elegantbook}
+% 大32开，148×210（mm）,4.625x6.5625英寸
+\usepackage[smartEllipses]{markdown}
+\usepackage{pdfpages}
+% \title{闲言碎语合集}
+% \subtitle{2016级五班}
+
+% \author{2016级五班学生}
+% \institute{闻涛小学2016级五班}
+% \date{\today}
+% \version{10}
+
+% \extrainfo{}
+
+% \logo{logo.jpg}
+% \cover{cover.jpg}
+
+
+\begin{document}
+
+
+    % 封面信息
+    \thispagestyle{empty}
+    \includepdf{doc/hardcover.pdf}
+    \thispagestyle{empty}
+    \newpage
+    \ % The empty page
+    \thispagestyle{empty}
+    \newpage 
+    \thispagestyle{empty}
+    \includepdf{doc/cover.pdf} 
+
+
+% \includegraphics[width=\paperwidth]{doc/cover.eps} 
+\clearpage
+
+\thispagestyle{empty}
+\vspace*{\fill}
+
+\begin{flushleft}
+    \begingroup
+    \zihao{-3}
+    主\hspace*{2\ccwd}编：詹慧丽\\
+    装帧设计：杨建林\\
+    \endgroup
+\end{flushleft}
+\vspace{3em}
+ \begin{flushleft}
+   \begingroup
+   \zihao{-3}
+   书\hspace*{2\ccwd}名：闲言碎语\\
+   版\hspace*{2\ccwd}次：2022年5月 第一版\\
+   开\hspace*{2\ccwd}本：889mm x 1194mm  1/32\\
+   字\hspace*{2\ccwd}数：2000 千字\\
+   印\hspace*{2\ccwd}数：50 册\\
+   定\hspace*{2\ccwd}价：48.00 元\\ 
+   \vspace{2em}
+   印刷、装订质量问题，出版社负责调换。
+   \endgroup
+ \end{flushleft}
+
+
+ \clearpage
+\thispagestyle{empty}
+\vspace*{3em}
+\Large\songti{献给：文化起点的回忆.}
+
+
+\tableofcontents
+\thispagestyle{empty}
+
+
+\mainmatter
+\hypersetup{pageanchor=true}
+
+
+\input{doc/0.tex}
+\markdownInput{doc/1.md}
+\markdownInput{doc/2.md}
+\markdownInput{doc/3.md}
+\markdownInput{doc/4.md}
+\markdownInput{doc/5.md}
+\markdownInput{doc/6.md}
+\markdownInput{doc/7.md}
+\markdownInput{doc/8.md}
+\markdownInput{doc/9.md}
+\markdownInput{doc/10.md}
+
+\end{document}
