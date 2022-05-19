@@ -21,3 +21,8 @@
 *.mtc1
 *.out
 *.synctex.gz
+*.fdb_latexmk
+*.lua
+_markdown_*/
+*.lua
+*.fdb_latexmk
