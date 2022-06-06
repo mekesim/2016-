@@ -1,0 +1,175 @@
+\documentclass[twoside,openany]{ctexbook}
+% 大32开，148×210（mm）,4.625x6.5625英寸
+% \usepackage[smartEllipses]{markdown}
+\usepackage{pdfpages}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{graphicx,stfloats}
+
+\definecolor{crany}{HTML}{304FFE}
+\usepackage{hyperref}
+\hypersetup{%
+    pdfborder = {0 0 0},
+    colorlinks,
+    citecolor=red,
+    filecolor=Darkgreen,
+    linkcolor=crany,
+    urlcolor=cyan!50!black!90
+}
+\usepackage{geometry}
+\geometry{
+	paperwidth=148mm, 
+	paperheight=210mm,
+	width=100mm,%width=104mm,
+%	height=149mm,
+	headsep=13mm,
+	% headheight=3mm,
+  % headheight=12pt,
+	footskip=14mm,
+	right=23mm,%right=21mm,
+	top=32mm
+  }
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+ \fancyhead[EL]{\zihao{-5}\color{crany}|~闲言碎语}
+ \fancyhead[OR]{\zihao{-5}\color{crany}\leftmark~|}
+ \fancyhead[OL,ER]{}
+ \fancyhead[C]{}
+ \fancyfoot[C]{\zihao{-5}\color{crany}\thepage}
+
+
+\fancypagestyle{plain}{
+\fancyhead{}
+\fancyfoot[C]{\zihao{-5}\color{crany}\thepage}
+} 
+
+
+\ctexset{
+chapter/name={},
+chapter/numbering=false,
+chapter/format +=  \color{crany},
+chapter/beforeskip=10pt,
+chapter/afterskip=50pt,
+section/numbering=false,
+section/format +=  \color{crany}\zihao{5}\raggedright,
+section/beforeskip=1.2ex,
+section/afterskip=0.2ex,
+section/afterindent=false,
+space=true,
+}
+\linespread{1.5}
+
+\usepackage{layout}
+\makeatletter
+\renewcommand*{\lay@value}[2]{%
+  \strip@pt\dimexpr0.351459\dimexpr\csname#2\endcsname\relax\relax mm%
+}
+
+\setcounter{tocdepth}{0}
+
+\makeatother
+
+\begin{document}
+%\layout % \\输出页面边界信息
+\zihao{5}
+
+% 封面信息
+\thispagestyle{empty}
+\includepdf{doc/hardcover.pdf}
+\thispagestyle{empty}
+\newpage
+\ % The empty page
+\thispagestyle{empty}
+\newpage
+
+
+
+\thispagestyle{empty}
+\includepdf{doc/cover.pdf}
+
+\clearpage
+
+\thispagestyle{empty}
+\vspace*{\fill}
+
+\begin{flushleft}
+  \begingroup
+
+  主\hspace*{2\ccwd}编：詹慧丽\\
+  装帧设计：杨建林\\
+  插\hspace*{2\ccwd}图：周\hspace*{1\ccwd}婧\\
+  \endgroup
+\end{flushleft}
+\vspace{3em}
+\begin{flushleft}
+
+  \begingroup
+
+  书\hspace*{2\ccwd}名：闲言碎语\\
+  版\hspace*{2\ccwd}次：2022年6月 第一版\\
+  开\hspace*{2\ccwd}本：889 mm $\times$ 1194 mm  1/32\\
+  字\hspace*{2\ccwd}数：70 千字\\
+  印\hspace*{2\ccwd}数：50 册\\
+  定\hspace*{2\ccwd}价：$\infty$ 元\\
+  \vspace{2em}
+  印刷、装订质量问题，出版社负责调换。
+  \endgroup
+\end{flushleft}
+
+\zihao {5}
+\clearpage
+
+\thispagestyle{empty}
+\vspace*{1em}
+\noindent\songti{献给，起点的回忆}
+\newpage
+
+\thispagestyle{empty}
+\
+\newpage
+
+%%%%%%%%%%% 
+%only for ebook
+\thispagestyle{empty}
+\includepdf{doc/family.pdf}
+\newpage
+
+\thispagestyle{empty}
+\
+\newpage
+%%%%%%%%%%%
+
+\thispagestyle{empty}
+\setcounter{page}{1}
+\heiti{\tableofcontents}
+
+\songti
+\mainmatter
+\hypersetup{pageanchor=true}
+
+
+% \input{doc/0.tex}
+\input{doc/1.tex}
+\input{doc/2.tex}
+\input{doc/3.tex}
+\input{doc/4.tex}
+\input{doc/5.tex}
+\input{doc/6.tex}
+\input{doc/7.tex}
+\input{doc/8.tex}
+\input{doc/9.tex}
+\input{doc/10.tex}
+\input{doc/11.tex}
+% \markdownInput{doc/11.md}
+
+%%%%%%%%%%% 封底
+\newpage
+\thispagestyle{empty}
+\
+\newpage
+\thispagestyle{empty}
+\includepdf{doc/hardback.pdf}
+\end{document}

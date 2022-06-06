@@ -1,8 +1,10 @@
-\documentclass[twoside]{ctexbook}
+\documentclass[twoside,openany]{ctexbook}
 % 大32开，148×210（mm）,4.625x6.5625英寸
-\usepackage[smartEllipses]{markdown}
+% \usepackage[smartEllipses]{markdown}
 \usepackage{pdfpages}
 \usepackage{xcolor}
+\usepackage{float}
+\usepackage{graphicx,stfloats}
 
 \definecolor{crany}{HTML}{304FFE}
 \usepackage{hyperref}
@@ -65,6 +67,9 @@ space=true,
 \renewcommand*{\lay@value}[2]{%
   \strip@pt\dimexpr0.351459\dimexpr\csname#2\endcsname\relax\relax mm%
 }
+
+\setcounter{tocdepth}{0}
+
 \makeatother
 
 \begin{document}
@@ -72,14 +77,16 @@ space=true,
 \zihao{5}
 
 % 封面信息
-% \thispagestyle{empty}
+\thispagestyle{empty}
+\includepdf{doc/hardcover.pdf}
+\thispagestyle{empty}
+\newpage
+\ % The empty page
+\thispagestyle{empty}
+\newpage
 
-% \includepdf{doc/hardcover.pdf}
-% \thispagestyle{empty}
-% \newpage
-% \ % The empty page
-% \thispagestyle{empty}
-% \newpage
+
+
 \thispagestyle{empty}
 \includepdf{doc/cover.pdf}
 
@@ -93,6 +100,7 @@ space=true,
 
   主\hspace*{2\ccwd}编：詹慧丽\\
   装帧设计：杨建林\\
+  插\hspace*{2\ccwd}图：周\hspace*{1\ccwd}婧\\
   \endgroup
 \end{flushleft}
 \vspace{3em}
@@ -101,11 +109,11 @@ space=true,
   \begingroup
 
   书\hspace*{2\ccwd}名：闲言碎语\\
-  版\hspace*{2\ccwd}次：2022年5月 第一版\\
-  开\hspace*{2\ccwd}本：889mm x 1194mm  1/32\\
+  版\hspace*{2\ccwd}次：2022年6月 第一版\\
+  开\hspace*{2\ccwd}本：889 mm $\times$ 1194 mm  1/32\\
   字\hspace*{2\ccwd}数：70 千字\\
   印\hspace*{2\ccwd}数：50 册\\
-  定\hspace*{2\ccwd}价：35.00 元\\
+  定\hspace*{2\ccwd}价：$\infty$ 元\\
   \vspace{2em}
   印刷、装订质量问题，出版社负责调换。
   \endgroup
@@ -115,35 +123,49 @@ space=true,
 \clearpage
 
 \thispagestyle{empty}
-
-\vspace*{3em}
-\hspace{3em}\songti{献给，起点的回忆}
+\vspace*{1em}
+\noindent\songti{献给，起点的回忆}
 \newpage
+
 \thispagestyle{empty}
 \
 \newpage
+
+%%%%%%%%%%% 
+%only for ebook
+\thispagestyle{empty}
+\includepdf{doc/family.pdf}
+\newpage
+
+\thispagestyle{empty}
+\
+\newpage
+%%%%%%%%%%%
+
+\thispagestyle{empty}
 \setcounter{page}{1}
 \heiti{\tableofcontents}
-\thispagestyle{empty}
 
 \songti
 \mainmatter
 \hypersetup{pageanchor=true}
 
 
-\input{doc/0.tex}
-\markdownInput{doc/1.md}
-\markdownInput{doc/2.md}
-\markdownInput{doc/3.md}
-\markdownInput{doc/4.md}
-\markdownInput{doc/5.md}
-\markdownInput{doc/6.md}
-\markdownInput{doc/7.md}
-\markdownInput{doc/8.md}
-\markdownInput{doc/9.md}
-\markdownInput{doc/10.md}
+% \input{doc/0.tex}
+\input{doc/1.tex}
+\input{doc/2.tex}
+\input{doc/3.tex}
+\input{doc/4.tex}
+\input{doc/5.tex}
+\input{doc/6.tex}
+\input{doc/7.tex}
+\input{doc/8.tex}
+\input{doc/9.tex}
+\input{doc/10.tex}
+\input{doc/11.tex}
 % \markdownInput{doc/11.md}
 
-% \thispagestyle{empty}
-% \includepdf{doc/hardback.pdf}
+%
+\thispagestyle{empty}
+\includepdf{doc/hardback.pdf}
 \end{document}

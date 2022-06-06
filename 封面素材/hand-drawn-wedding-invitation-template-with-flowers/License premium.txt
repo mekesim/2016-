@@ -3,7 +3,7 @@ a subscribed (or "premium") user. If you are an unsubscribed user (or "free"
 user) you are bound to the license terms described in the accompanying file
 "License free.txt".
 
----------------------
+——————---
 
 You can download from your profile in Freepik a personalized license stating
 your right to use this content as a "premium" user:
